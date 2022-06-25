@@ -1,38 +1,223 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homepageTemplate {
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+}
+
+footer h4 {
+  margin-bottom: 0px;
+}
+
+footer a {
+  color: brown;
+}
+
+.formTemplate {
+  background: #109ab1;
+  padding: 20px;
+  border-radius: 10px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.formgrp {
+  display: flex;
+  flex-direction: column;
+}
+
+.imgstyle {
+  border-radius: 10px;
+}
+
+.formbox {
+  padding: 10px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  margin-bottom: 14px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.btn {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btnJoin {
+  background-color: #ffd558;
+  width: 100px;
+  margin-left: auto;
+}
+
+.btnJoin:hover {
+  background-color: #d7a40e;
+}
+
+.Info {
+  margin: 0 auto;
+  margin-top: 14px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.createNewBtn {
+  color: brown;
+  text-decoration: none;
+}
+
+.createNewBtn:hover {
+  border-bottom: 2px solid;
+}
+
+.mainWrap {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+}
+
+.aside {
+  background-color: #10a2b2;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.asideInner {
+  flex: 1;
+}
+
+.clientList {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.client {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-weight: bold;
+}
+
+.username {
+  padding-top: 10px;
+}
+
+.logo {
+  border-radius: 10px;
+  border-bottom: 3px solid;
+}
+
+.leavebtn {
+  margin-top: 20px;
+  background-color: red;
+}
+
+.leavebtn:hover {
+  background-color: darkred;
+}
+
+.ideWrap {
+  padding-left: 5px;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 7px;
+}
+
+.CodeMirror {
+  position: fixed;
+  max-width: 450px;
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 94vh;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 450px 1fr;
+}
+
+.board {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  position: fixed;
+  width: 900px;
+  height: 100%;
+}
+
+.color-picker-container {
+  margin-left: 20px;
+  text-align: center;
+  display: inline;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.brushsize-container {
+  display: inline;
+  color: white;
+  margin-left: 12px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tools-section {
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.btnwhiteboard {
+  padding: 5px;
+  margin-left: 20px;
+}
+
+.board-container {
+  width: 90%;
+  height: 94vh;
+  margin-left: 10px;
+  margin-right: 10px;
+  background: white;
+}
+
+.social-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  font-weight: bold;
+  font-size: 30px;
+  margin-left: 30%;
+}
+
+.twitter {
+  color: darkblue;
+  margin-right: 10px;
+}
+
+.facebook {
+  color: #3b5998;
+  margin-right: 10px;
+}
+
+.instagram {
+  color: purple;
+  margin-right: 10px;
+}
+
+.github {
+  color: black;
 }
