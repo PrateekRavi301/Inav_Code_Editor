@@ -45,7 +45,8 @@ const Ide = ({ socketRef, roomId, onCodeChange }) => {
       editorRef.current.setValue(`//your code goes here...`);
     }
     init();
-  }, [socketRef, roomId, onCodeChange, socketRefCurrent]);
+    // eslint-disable-next-line
+  }, []);
 
   useEffect(() => {
     if (socketRefCurrent) {
