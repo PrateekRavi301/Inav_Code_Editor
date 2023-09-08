@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from 'react'
 import ACTIONS from '../Actions';
 
 const Whiteboard = ({ socketRef, roomId , onImageChange }) => {
+    const socketRefCurrent = socketRef.current;
     const [isDrawing, setIsDrawing] = useState(false);
     const [color, setColor] = useState("#3B3B3B");
     const [size, setSize] = useState("3");
@@ -23,8 +24,8 @@ const Whiteboard = ({ socketRef, roomId , onImageChange }) => {
     }, [ctx]);
 
     useEffect(() => {
-        if (socketRef.current) {
-            socketRef.current.on(ACTIONS.IMAGE_CHANGE, ({ canvasimg }) => {
+        if (socketRefCurrent) {
+            socketRefCurrent.on(ACTIONS.IMAGE_CHANGE, ({ canvasimg }) => {
                 // console.log(canvasimg);
                 var img = new Image();
                 img.onload = function () {
@@ -35,9 +36,9 @@ const Whiteboard = ({ socketRef, roomId , onImageChange }) => {
         }
 
         return () => {
-            socketRef.current.off(ACTIONS.IMAGE_CHANGE);
+            socketRefCurrent.off(ACTIONS.IMAGE_CHANGE);
         };
-    }, [socketRef.current]);
+    }, [socketRefCurrent]);
 
     const startPosition = ({ nativeEvent }) => {
         setIsDrawing(true);
@@ -68,7 +69,7 @@ const Whiteboard = ({ socketRef, roomId , onImageChange }) => {
         var canvasimg = document.getElementById('board').toDataURL();
         // console.log(canvasimg);
         onImageChange(canvasimg);
-        socketRef.current.emit(ACTIONS.IMAGE_CHANGE, {
+        socketRefCurrent.emit(ACTIONS.IMAGE_CHANGE, {
             roomId,
             canvasimg,
         });
@@ -83,7 +84,7 @@ const Whiteboard = ({ socketRef, roomId , onImageChange }) => {
         context.fillRect(0, 0, canvas.width, canvas.height);
         var canvasimg = document.getElementById('board').toDataURL();
         // console.log(canvasimg);
-        socketRef.current.emit(ACTIONS.IMAGE_CHANGE, {
+        socketRefCurrent.emit(ACTIONS.IMAGE_CHANGE, {
             roomId,
             canvasimg,
         });
