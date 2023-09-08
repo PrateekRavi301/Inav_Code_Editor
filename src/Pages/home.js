@@ -3,9 +3,8 @@ import { v4 as uuidV4 } from 'uuid'
 import toast from 'react-hot-toast'
 import { useNavigate } from 'react-router-dom'
 import { FaTwitter } from 'react-icons/fa'
-import { FaFacebook } from 'react-icons/fa'
 import { FaGithub } from 'react-icons/fa'
-import { FaInstagram } from 'react-icons/fa'
+import { FaLinkedin } from "react-icons/fa";
 
 
 
@@ -50,7 +49,7 @@ const Home = () => {
           <button className='btn btnJoin' onClick={joinRoom}>JOIN</button>
           <span className='Info'>
             For creating New Room &rarr;&nbsp;
-            <a onClick={createNewRoom} href='/newroom' className='createNewBtn'>Click Here !</a>
+            <a onClick={createNewRoom} href='/newroomcreated'  className='createNewBtn'>Click Here !</a>
           </span>
         </div>
       </div>
@@ -58,10 +57,9 @@ const Home = () => {
         <h4>
           All Rights Reserved. Made with&nbsp;&#x1f495;&nbsp;in India
           <div className='social-container'>
-            <a href='https://twitter.com/PRATEEKRAVI011'  className='twitter'><FaTwitter /></a>
-            <a href='https://www.facebook.com/prateek.ravi.1'  className='facebook'><FaFacebook /></a>
-            <a href='https://www.instagram.com/_prateekravi/' className='instagram'><FaInstagram /></a>
-            <a href='https://github.com/PrateekRavi301'  className='github'><FaGithub /></a>
+          <a href='https://twitter.com/PRATEEKRAVI011' className='twitter'><FaTwitter /></a>
+            <a href='https://www.linkedin.com/in/prateek-ravi-1708081a6' className='linkedin'><FaLinkedin/></a>
+            <a href='https://github.com/PrateekRavi301' className='github'><FaGithub /></a>
           </div>
         </h4>
       </footer>
