@@ -15,7 +15,8 @@ footer h4 {
 }
 
 footer a {
-  color: brown;
+  color: black;
+  margin: 10px;
 }
 
 .formTemplate {
@@ -201,23 +202,5 @@ h2 {
   font-weight: bold;
   font-size: 30px;
   margin-left: 30%;
-}
-
-.twitter {
-  color: darkblue;
-  margin-right: 10px;
-}
-
-.facebook {
-  color: #3b5998;
-  margin-right: 10px;
-}
-
-.instagram {
-  color: purple;
-  margin-right: 10px;
-}
-
-.github {
   color: black;
 }
