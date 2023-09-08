@@ -36,7 +36,7 @@ const Whiteboard = ({ socketRef, roomId , onImageChange }) => {
         }
 
         return () => {
-            socketRefCurrent.off(ACTIONS.IMAGE_CHANGE);
+            // socketRefCurrent.off(ACTIONS.IMAGE_CHANGE);
         };
     }, [socketRefCurrent]);
 
