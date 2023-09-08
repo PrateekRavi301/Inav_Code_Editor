@@ -12,8 +12,8 @@ function App() {
       </div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home />}></Route>//Route for home page
-          <Route path="/ide/:roomId" element={<EditorPage />}></Route>//Route for ide page
+          <Route path="/" element={<Home />}></Route>
+          <Route path="/ide/:roomId" element={<EditorPage />}></Route>
         </Routes>
       </BrowserRouter>
     </>
