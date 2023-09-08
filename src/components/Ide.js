@@ -58,7 +58,7 @@ const Ide = ({ socketRef, roomId, onCodeChange }) => {
     }
 
     return () => {
-      socketRefCurrent.off(ACTIONS.CODE_CHANGE);
+      // socketRefCurrent.off(ACTIONS.CODE_CHANGE);
     };
   }, [socketRefCurrent]);
 
