@@ -50,7 +50,7 @@ const Home = () => {
           <button className='btn btnJoin' onClick={joinRoom}>JOIN</button>
           <span className='Info'>
             For creating New Room &rarr;&nbsp;
-            <a onClick={createNewRoom} href='/' className='createNewBtn'>Click Here !</a>
+            <a onClick={createNewRoom} href='/newroom' className='createNewBtn'>Click Here !</a>
           </span>
         </div>
       </div>
