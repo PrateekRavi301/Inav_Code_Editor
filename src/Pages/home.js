@@ -58,10 +58,10 @@ const Home = () => {
         <h4>
           All Rights Reserved. Made with&nbsp;&#x1f495;&nbsp;in India
           <div className='social-container'>
-            <a href='https://twitter.com/PRATEEKRAVI011' target="_blank" className='twitter'><FaTwitter /></a>
-            <a href='https://www.facebook.com/prateek.ravi.1' target="_blank" className='facebook'><FaFacebook /></a>
-            <a href='https://www.instagram.com/_prateekravi/' target="_blank" className='instagram'><FaInstagram /></a>
-            <a href='https://github.com/PrateekRavi301' target="_blank" className='github'><FaGithub /></a>
+            <a href='https://twitter.com/PRATEEKRAVI011'  className='twitter'><FaTwitter /></a>
+            <a href='https://www.facebook.com/prateek.ravi.1'  className='facebook'><FaFacebook /></a>
+            <a href='https://www.instagram.com/_prateekravi/' className='instagram'><FaInstagram /></a>
+            <a href='https://github.com/PrateekRavi301'  className='github'><FaGithub /></a>
           </div>
         </h4>
       </footer>
