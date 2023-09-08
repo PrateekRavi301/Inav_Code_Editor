@@ -8,6 +8,7 @@ import 'codemirror/addon/edit/closebrackets'
 import ACTIONS from '../Actions';
 
 const Ide = ({ socketRef, roomId, onCodeChange }) => {
+  const socketRefCurrent = socketRef.current;
   const editorRef = useRef(null);
   // console.log("IdeSocketRef:",socketRef);
   // console.log("IdeRoomID:",roomId);
@@ -29,14 +30,14 @@ const Ide = ({ socketRef, roomId, onCodeChange }) => {
         // console.log(origin);
         onCodeChange(code);
         if (origin !== 'setValue') {
-          socketRef.current.emit(ACTIONS.CODE_CHANGE, {
+          socketRefCurrent.emit(ACTIONS.CODE_CHANGE, {
             roomId,
             code,
           });
         }
       });
 
-      // socketRef.current.on(ACTIONS.CODE_CHANGE, ({ code }) => {
+      // socketRefCurrent.on(ACTIONS.CODE_CHANGE, ({ code }) => {
       //   if (code !== null) {
       //     editorRef.current.setValue(code);
       //   }
@@ -44,11 +45,11 @@ const Ide = ({ socketRef, roomId, onCodeChange }) => {
       editorRef.current.setValue(`//your code goes here...`);
     }
     init();
-  }, []);
+  }, [socketRef, roomId, onCodeChange, socketRefCurrent]);
 
   useEffect(() => {
-    if (socketRef.current) {
-      socketRef.current.on(ACTIONS.CODE_CHANGE, ({ code }) => {
+    if (socketRefCurrent) {
+      socketRefCurrent.on(ACTIONS.CODE_CHANGE, ({ code }) => {
         if (code !== null) {
           editorRef.current.setValue(code);
         }
@@ -56,9 +57,9 @@ const Ide = ({ socketRef, roomId, onCodeChange }) => {
     }
 
     return () => {
-      socketRef.current.off(ACTIONS.CODE_CHANGE);
+      socketRefCurrent.off(ACTIONS.CODE_CHANGE);
     };
-  }, [socketRef.current]);
+  }, [socketRefCurrent]);
 
   return (
     <textarea id="realtimeIde"></textarea>
